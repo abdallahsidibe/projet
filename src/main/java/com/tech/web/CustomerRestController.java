@@ -16,6 +16,10 @@ import java.util.List;
 @CrossOrigin("*")
 public class CustomerRestController {
     private BankAccountService bankAccountService;
+    @GetMapping("/home")
+    public String home(){
+        return "hello";
+    }
     @GetMapping("/customers")
     public List<CustomerDTO> customers(){
         return bankAccountService.listCustomers();
